@@ -1,0 +1,530 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "An example of a radial layout for a node-link diagram of hierarchical data.",
+    "width": 1410,
+    "height": 500,
+    "padding": 0,
+    "autosize": "none",
+    "signals": [
+        {
+            "name": "xShift",
+            "value": 80
+        },
+        {
+            "name": "labels",
+            "value": true,
+            "bind": {
+                "input": "checkbox"
+            }
+        },
+        {
+            "name": "layout",
+            "value": "cluster",
+            "bind": {
+                "input": "radio",
+                "options": [
+                    "tidy",
+                    "cluster"
+                ]
+            }
+        },
+        {
+            "name": "links",
+            "value": "diagonal",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "line",
+                    "curve",
+                    "diagonal",
+                    "orthogonal"
+                ]
+            }
+        }
+    ],
+    "data": [
+        {
+            "name": "tree",
+            "values": [
+                {
+                    "id": 0,
+                    "name": "Body",
+                    "type": "AS",
+                    "ontology_id": "UBERON:0013702",
+                    "id_from_ontology_id": "UBERON:0013702",
+                    "color": "#984ea0",
+                    "organ": "body",
+                    "show_label": 1,
+                    "label_text": "Body",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 35,
+                    "name": "Main bronchus",
+                    "parent": 0,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002182",
+                    "id_from_ontology_id": "UBERON:0002182",
+                    "color": "#984ea0",
+                    "organ": "main_bronchus",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 40,
+                    "name": "Bronchus submucosal gland",
+                    "parent": 35,
+                    "type": "AS",
+                    "ontology_id": "UBERON:8410043",
+                    "id_from_ontology_id": "UBERON:8410043$$5624",
+                    "color": "#C62828",
+                    "organ": "main_bronchus",
+                    "show_label": 1,
+                    "label_text": "Bronchial submucosal gland",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 66,
+                    "name": "Respiratory system",
+                    "parent": 0,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001004",
+                    "id_from_ontology_id": "UBERON:0001004",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Respiratory system",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 67,
+                    "name": "Respiratory tract",
+                    "parent": 66,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0000065",
+                    "id_from_ontology_id": "UBERON:0000065",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Respiratory tract",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 68,
+                    "name": "Lower respiratory tract",
+                    "parent": 67,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001558",
+                    "id_from_ontology_id": "UBERON:0001558",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Lower respiratory tract",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 164,
+                    "name": "Lung",
+                    "parent": 68,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002048",
+                    "id_from_ontology_id": "UBERON:0002048",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Lung",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 165,
+                    "name": "Secondary pulmonary lobule",
+                    "parent": 164,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0010369",
+                    "id_from_ontology_id": "UBERON:0010369",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Secondary pulmonary lobule",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 166,
+                    "name": "Terminal bronchiole",
+                    "parent": 165,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002187",
+                    "id_from_ontology_id": "UBERON:0002187",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Terminal bronchiole",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 173,
+                    "name": "Pulmonary acinus",
+                    "parent": 166,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0008874",
+                    "id_from_ontology_id": "UBERON:0008874",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Pulmonary acinus",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 174,
+                    "name": "Respiratory bronchiole",
+                    "parent": 173,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002188",
+                    "id_from_ontology_id": "UBERON:0002188",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Respiratory bronchiole",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 181,
+                    "name": "Alveolus of lung",
+                    "parent": 174,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002299",
+                    "id_from_ontology_id": "UBERON:0002299",
+                    "color": "#C62828",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Alveolus of lung",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 182,
+                    "name": "Pulmonary capillary",
+                    "parent": 181,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0016405",
+                    "id_from_ontology_id": "UBERON:0016405$$5500",
+                    "color": "#984ea0",
+                    "organ": "lung",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 183,
+                    "name": "Alveolar capillary type 2 endothelial cell",
+                    "parent": 182,
+                    "type": "CT",
+                    "ontology_id": "CL:4028003",
+                    "id_from_ontology_id": "CL:4028003",
+                    "color": "#ff7f00",
+                    "organ": "lung",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 184,
+                    "name": "Alveolar capillary type 1 endothelial cell",
+                    "parent": 182,
+                    "type": "CT",
+                    "ontology_id": "CL:4028002",
+                    "id_from_ontology_id": "CL:4028002",
+                    "color": "#ff7f00",
+                    "organ": "lung",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 185,
+                    "name": "Pulmonary alveolar type 2 cell",
+                    "parent": 181,
+                    "type": "CT",
+                    "ontology_id": "CL:0002063",
+                    "id_from_ontology_id": "CL:0002063",
+                    "color": "#C62828",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Type II pneumocyte",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 186,
+                    "name": "Pulmonary alveolar type 1 cell",
+                    "parent": 181,
+                    "type": "CT",
+                    "ontology_id": "CL:0002062",
+                    "id_from_ontology_id": "CL:0002062",
+                    "color": "#C62828",
+                    "organ": "lung",
+                    "show_label": 1,
+                    "label_text": "Type I pneumocyte",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 187,
+                    "name": "Lung pericyte",
+                    "parent": 181,
+                    "type": "CT",
+                    "ontology_id": "CL:0009089",
+                    "id_from_ontology_id": "CL:0009089",
+                    "color": "#ff7f00",
+                    "organ": "lung",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 188,
+                    "name": "Alveolar adventitial fibroblast",
+                    "parent": 181,
+                    "type": "CT",
+                    "ontology_id": "CL:4028006",
+                    "id_from_ontology_id": "CL:4028006",
+                    "color": "#ff7f00",
+                    "organ": "lung",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 189,
+                    "name": "Alveolar type 1 fibroblast cell",
+                    "parent": 181,
+                    "type": "CT",
+                    "ontology_id": "CL:4028004",
+                    "id_from_ontology_id": "CL:4028004",
+                    "color": "#ff7f00",
+                    "organ": "lung",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                }
+            ],
+            "transform": [
+                {
+                    "type": "stratify",
+                    "key": "id",
+                    "parentKey": "parent"
+                },
+                {
+                    "type": "tree",
+                    "method": {
+                        "signal": "layout"
+                    },
+                    "size": [
+                        240,
+                        1100
+                    ],
+                    "as": [
+                        "x",
+                        "y",
+                        "depth",
+                        "children"
+                    ]
+                },
+                {
+                    "type": "formula",
+                    "expr": "datum.y + 50",
+                    "as": "x_draw"
+                },
+                {
+                    "type": "formula",
+                    "expr": "datum.x + 220",
+                    "as": "y_draw"
+                }
+            ]
+        },
+        {
+            "name": "links",
+            "source": "tree",
+            "transform": [
+                {
+                    "type": "treelinks"
+                },
+                {
+                    "type": "linkpath",
+                    "shape": {
+                        "signal": "links"
+                    },
+                    "orient": "horizontal",
+                    "sourceX": "source.x_draw",
+                    "sourceY": "source.y_draw",
+                    "targetX": "target.x_draw",
+                    "targetY": "target.y_draw"
+                }
+            ]
+        }
+    ],
+    "marks": [
+        {
+            "type": "path",
+            "from": {
+                "data": "links"
+            },
+            "encode": {
+                "update": {
+                    "path": {
+                        "field": "path"
+                    },
+                    "stroke": {
+                        "value": "#ccc"
+                    },
+                    "opacity": {
+                        "value": 0.8
+                    },
+                    "strokeWidth": {
+                        "value": 1.1
+                    }
+                }
+            }
+        },
+        {
+            "type": "symbol",
+            "from": {
+                "data": "tree"
+            },
+            "encode": {
+                "enter": {
+                    "size": {
+                        "value": 45
+                    },
+                    "stroke": {
+                        "value": "#fff"
+                    },
+                    "strokeWidth": {
+                        "value": 0.5
+                    }
+                },
+                "update": {
+                    "x": {
+                        "field": "x_draw"
+                    },
+                    "y": {
+                        "field": "y_draw"
+                    },
+                    "fill": {
+                        "field": "color"
+                    },
+                    "opacity": {
+                        "value": 0.7
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "tree"
+            },
+            "encode": {
+                "enter": {
+                    "text": {
+                        "field": "label_text"
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "font": {
+                        "value": "BentonSans"
+                    },
+                    "baseline": {
+                        "value": "middle"
+                    }
+                },
+                "update": {
+                    "x": {
+                        "field": "x_draw"
+                    },
+                    "y": {
+                        "field": "y_draw"
+                    },
+                    "align": {
+                        "field": "label_align"
+                    },
+                    "opacity": {
+                        "signal": "datum.label_text != '' ? 1 : 0"
+                    },
+                    "dx": {
+                        "field": "label_dx"
+                    },
+                    "dy": {
+                        "field": "label_dy"
+                    },
+                    "baseline": {
+                        "field": "label_baseline"
+                    },
+                    "angle": {
+                        "value": -30
+                    }
+                }
+            }
+        }
+    ],
+    "config": {}
+}

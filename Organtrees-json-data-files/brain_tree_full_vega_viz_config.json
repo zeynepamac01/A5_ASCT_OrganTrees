@@ -1,0 +1,956 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "An example of a radial layout for a node-link diagram of hierarchical data.",
+    "width": 910,
+    "height": 995,
+    "padding": 0,
+    "autosize": "none",
+    "signals": [
+        {
+            "name": "xShift",
+            "value": 80
+        },
+        {
+            "name": "labels",
+            "value": true,
+            "bind": {
+                "input": "checkbox"
+            }
+        },
+        {
+            "name": "layout",
+            "value": "cluster",
+            "bind": {
+                "input": "radio",
+                "options": [
+                    "tidy",
+                    "cluster"
+                ]
+            }
+        },
+        {
+            "name": "links",
+            "value": "diagonal",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "line",
+                    "curve",
+                    "diagonal",
+                    "orthogonal"
+                ]
+            }
+        }
+    ],
+    "data": [
+        {
+            "name": "tree",
+            "values": [
+                {
+                    "id": 0,
+                    "name": "Body",
+                    "type": "AS",
+                    "ontology_id": "UBERON:0013702",
+                    "id_from_ontology_id": "UBERON:0013702",
+                    "color": "#984ea0",
+                    "organ": "body",
+                    "show_label": 1,
+                    "label_text": "Body",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 5605,
+                    "name": "Brain",
+                    "parent": 0,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0000955",
+                    "id_from_ontology_id": "UBERON:0000955",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 1,
+                    "label_text": "Brain",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 5606,
+                    "name": "Forebrain",
+                    "parent": 5605,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001890",
+                    "id_from_ontology_id": "UBERON:0001890",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 5607,
+                    "name": "Gray matter of forebrain",
+                    "parent": 5606,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0019264",
+                    "id_from_ontology_id": "UBERON:0019264",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 5969,
+                    "name": "Amygdala",
+                    "parent": 5607,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001876",
+                    "id_from_ontology_id": "UBERON:0001876",
+                    "color": "#C62828",
+                    "organ": "allen_brain",
+                    "show_label": 1,
+                    "label_text": "Amygdala",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6041,
+                    "name": "Dorsal plus ventral thalamus",
+                    "parent": 5607,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001897",
+                    "id_from_ontology_id": "UBERON:0001897",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6059,
+                    "name": "Epithalamus",
+                    "parent": 6041,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001899",
+                    "id_from_ontology_id": "UBERON:0001899",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6062,
+                    "name": "Pineal body",
+                    "parent": 6059,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001905",
+                    "id_from_ontology_id": "UBERON:0001905",
+                    "color": "#C62828",
+                    "organ": "allen_brain",
+                    "show_label": 1,
+                    "label_text": "Pineal gland",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6065,
+                    "name": "Hypothalamus",
+                    "parent": 5607,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001898",
+                    "id_from_ontology_id": "UBERON:0001898",
+                    "color": "#C62828",
+                    "organ": "allen_brain",
+                    "show_label": 1,
+                    "label_text": "Hypothalamus",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6096,
+                    "name": "Oligodendrocyte precursor cell",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0002453",
+                    "id_from_ontology_id": "CL:0002453$$3657",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6123,
+                    "name": "Oligodendrocyte",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0000128",
+                    "id_from_ontology_id": "CL:0000128$$3659",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6125,
+                    "name": "Astrocyte of the forebrain",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0012000",
+                    "id_from_ontology_id": "CL:0012000",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6129,
+                    "name": "Ependymal cell",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0000065",
+                    "id_from_ontology_id": "CL:0000065$$3663",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6131,
+                    "name": "Near-projecting glutamatergic cortical neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023012",
+                    "id_from_ontology_id": "CL:4023012$$3665",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6137,
+                    "name": "Glutamatergic neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0000679",
+                    "id_from_ontology_id": "CL:0000679$$3667",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6146,
+                    "name": "Neuron of the forebrain",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0012001",
+                    "id_from_ontology_id": "CL:0012001",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6151,
+                    "name": "Intratelencephalic-projecting glutamatergic cortical neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023008",
+                    "id_from_ontology_id": "CL:4023008$$3670",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6169,
+                    "name": "Amygdala excitatory neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023039",
+                    "id_from_ontology_id": "CL:4023039$$3671",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6184,
+                    "name": "Hippocampal ca1-3 neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023060",
+                    "id_from_ontology_id": "CL:4023060$$3676",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6186,
+                    "name": "Medium spiny neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:1001474",
+                    "id_from_ontology_id": "CL:1001474$$3679",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6205,
+                    "name": "Medial ganglionic eminence derived interneuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023063",
+                    "id_from_ontology_id": "CL:4023063",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6220,
+                    "name": "Neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0000540",
+                    "id_from_ontology_id": "CL:0000540$$3682",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6234,
+                    "name": "Cns interneuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0000402",
+                    "id_from_ontology_id": "CL:0000402",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6243,
+                    "name": "Caudal ganglionic eminence derived cortical interneuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023064",
+                    "id_from_ontology_id": "CL:4023064",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6263,
+                    "name": "Thalamic excitatory neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:4023068",
+                    "id_from_ontology_id": "CL:4023068$$3701",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6270,
+                    "name": "Gabaergic interneuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0011005",
+                    "id_from_ontology_id": "CL:0011005$$3729",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6273,
+                    "name": "Cholinergic neuron",
+                    "parent": 5607,
+                    "type": "CT",
+                    "ontology_id": "CL:0000108",
+                    "id_from_ontology_id": "CL:0000108",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6279,
+                    "name": "White matter of forebrain",
+                    "parent": 5606,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0019261",
+                    "id_from_ontology_id": "UBERON:0019261",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6288,
+                    "name": "Telencephalic ventricle",
+                    "parent": 5606,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002285",
+                    "id_from_ontology_id": "UBERON:0002285",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6295,
+                    "name": "Gabaergic interneuron",
+                    "parent": 5606,
+                    "type": "CT",
+                    "ontology_id": "CL:0011005",
+                    "id_from_ontology_id": "CL:0011005$$3725",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6297,
+                    "name": "Midbrain",
+                    "parent": 5605,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001891",
+                    "id_from_ontology_id": "UBERON:0001891",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6298,
+                    "name": "Gray matter of midbrain",
+                    "parent": 6297,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0019267",
+                    "id_from_ontology_id": "UBERON:0019267",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6311,
+                    "name": "Midbrain dopaminergic neuron",
+                    "parent": 6298,
+                    "type": "CT",
+                    "ontology_id": "CL:2000097",
+                    "id_from_ontology_id": "CL:2000097",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6314,
+                    "name": "White matter of midbrain",
+                    "parent": 6297,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0016554",
+                    "id_from_ontology_id": "UBERON:0016554",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6316,
+                    "name": "Midbrain cerebral aqueduct",
+                    "parent": 6297,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002289",
+                    "id_from_ontology_id": "UBERON:0002289",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6317,
+                    "name": "Neuron",
+                    "parent": 6297,
+                    "type": "CT",
+                    "ontology_id": "CL:0000540",
+                    "id_from_ontology_id": "CL:0000540$$3690",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6331,
+                    "name": "Hindbrain",
+                    "parent": 5605,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002028",
+                    "id_from_ontology_id": "UBERON:0002028",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6332,
+                    "name": "Gray matter of hindbrain",
+                    "parent": 6331,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0019263",
+                    "id_from_ontology_id": "UBERON:0019263",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6380,
+                    "name": "Ependymal cell",
+                    "parent": 6332,
+                    "type": "CT",
+                    "ontology_id": "CL:0000065",
+                    "id_from_ontology_id": "CL:0000065$$3662",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6383,
+                    "name": "Cerebellar inhibitory gabaergic interneuron",
+                    "parent": 6332,
+                    "type": "CT",
+                    "ontology_id": "CL:4023057",
+                    "id_from_ontology_id": "CL:4023057",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6390,
+                    "name": "Neuron",
+                    "parent": 6332,
+                    "type": "CT",
+                    "ontology_id": "CL:0000540",
+                    "id_from_ontology_id": "CL:0000540$$3693",
+                    "color": "#ff7f00",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6403,
+                    "name": "White matter of hindbrain",
+                    "parent": 6331,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0019258",
+                    "id_from_ontology_id": "UBERON:0019258",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 6408,
+                    "name": "Brain ventricle",
+                    "parent": 6331,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0004086",
+                    "id_from_ontology_id": "UBERON:0004086",
+                    "color": "#984ea0",
+                    "organ": "allen_brain",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                }
+            ],
+            "transform": [
+                {
+                    "type": "stratify",
+                    "key": "id",
+                    "parentKey": "parent"
+                },
+                {
+                    "type": "tree",
+                    "method": {
+                        "signal": "layout"
+                    },
+                    "size": [
+                        570,
+                        600
+                    ],
+                    "as": [
+                        "x",
+                        "y",
+                        "depth",
+                        "children"
+                    ]
+                },
+                {
+                    "type": "formula",
+                    "expr": "datum.y + 50",
+                    "as": "x_draw"
+                },
+                {
+                    "type": "formula",
+                    "expr": "datum.x + 220",
+                    "as": "y_draw"
+                }
+            ]
+        },
+        {
+            "name": "links",
+            "source": "tree",
+            "transform": [
+                {
+                    "type": "treelinks"
+                },
+                {
+                    "type": "linkpath",
+                    "shape": {
+                        "signal": "links"
+                    },
+                    "orient": "horizontal",
+                    "sourceX": "source.x_draw",
+                    "sourceY": "source.y_draw",
+                    "targetX": "target.x_draw",
+                    "targetY": "target.y_draw"
+                }
+            ]
+        },
+        {
+            "name": "brain_editorial_annotations",
+            "values": [
+                {
+                    "label": "Amygdala (AS): pyramidal glutamatergic neurons (CT)",
+                    "y": 875
+                },
+                {
+                    "label": "Hypothalamus (AS): magnocellular neurosecretory cells (CT)",
+                    "y": 899
+                },
+                {
+                    "label": "Pituitary gland (AS): somatotrophs (CT)",
+                    "y": 923
+                },
+                {
+                    "label": "Pineal gland (AS): pinealocytes (CT)",
+                    "y": 947
+                }
+            ]
+        }
+    ],
+    "marks": [
+        {
+            "type": "path",
+            "from": {
+                "data": "links"
+            },
+            "encode": {
+                "update": {
+                    "path": {
+                        "field": "path"
+                    },
+                    "stroke": {
+                        "value": "#ccc"
+                    },
+                    "opacity": {
+                        "value": 0.8
+                    },
+                    "strokeWidth": {
+                        "value": 1.1
+                    }
+                }
+            }
+        },
+        {
+            "type": "symbol",
+            "from": {
+                "data": "tree"
+            },
+            "encode": {
+                "enter": {
+                    "size": {
+                        "value": 45
+                    },
+                    "stroke": {
+                        "value": "#fff"
+                    },
+                    "strokeWidth": {
+                        "value": 0.5
+                    }
+                },
+                "update": {
+                    "x": {
+                        "field": "x_draw"
+                    },
+                    "y": {
+                        "field": "y_draw"
+                    },
+                    "fill": {
+                        "field": "color"
+                    },
+                    "opacity": {
+                        "value": 0.7
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "tree"
+            },
+            "encode": {
+                "enter": {
+                    "text": {
+                        "field": "label_text"
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "font": {
+                        "value": "BentonSans"
+                    },
+                    "baseline": {
+                        "value": "middle"
+                    }
+                },
+                "update": {
+                    "x": {
+                        "field": "x_draw"
+                    },
+                    "y": {
+                        "field": "y_draw"
+                    },
+                    "align": {
+                        "field": "label_align"
+                    },
+                    "opacity": {
+                        "signal": "datum.label_text != '' ? 1 : 0"
+                    },
+                    "dx": {
+                        "field": "label_dx"
+                    },
+                    "dy": {
+                        "field": "label_dy"
+                    },
+                    "baseline": {
+                        "field": "label_baseline"
+                    },
+                    "angle": {
+                        "value": -30
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "brain_editorial_annotations"
+            },
+            "encode": {
+                "enter": {
+                    "text": {
+                        "field": "label"
+                    },
+                    "x": {
+                        "value": 50
+                    },
+                    "y": {
+                        "field": "y"
+                    },
+                    "font": {
+                        "value": "Benton Sans"
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "fontWeight": {
+                        "value": "medium"
+                    },
+                    "fill": {
+                        "value": "#333333"
+                    },
+                    "align": {
+                        "value": "left"
+                    },
+                    "baseline": {
+                        "value": "top"
+                    }
+                }
+            }
+        }
+    ],
+    "config": {}
+}

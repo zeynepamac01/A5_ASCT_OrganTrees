@@ -1,0 +1,1010 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "An example of a radial layout for a node-link diagram of hierarchical data.",
+    "width": 810,
+    "height": 830,
+    "padding": 0,
+    "autosize": "none",
+    "signals": [
+        {
+            "name": "xShift",
+            "value": 80
+        },
+        {
+            "name": "labels",
+            "value": true,
+            "bind": {
+                "input": "checkbox"
+            }
+        },
+        {
+            "name": "layout",
+            "value": "cluster",
+            "bind": {
+                "input": "radio",
+                "options": [
+                    "tidy",
+                    "cluster"
+                ]
+            }
+        },
+        {
+            "name": "links",
+            "value": "diagonal",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "line",
+                    "curve",
+                    "diagonal",
+                    "orthogonal"
+                ]
+            }
+        }
+    ],
+    "data": [
+        {
+            "name": "tree",
+            "values": [
+                {
+                    "id": 0,
+                    "name": "Body",
+                    "type": "AS",
+                    "ontology_id": "UBERON:0013702",
+                    "id_from_ontology_id": "UBERON:0013702",
+                    "color": "#984ea0",
+                    "organ": "body",
+                    "show_label": 1,
+                    "label_text": "Body",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7246,
+                    "name": "Liver",
+                    "parent": 0,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002107",
+                    "id_from_ontology_id": "UBERON:0002107",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 1,
+                    "label_text": "Liver",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7247,
+                    "name": "Liver lobule",
+                    "parent": 7246,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0004647",
+                    "id_from_ontology_id": "UBERON:0004647",
+                    "color": "#C62828",
+                    "organ": "liver",
+                    "show_label": 1,
+                    "label_text": "Hepatic lobule",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7248,
+                    "name": "Hepatic sinusoid",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001281",
+                    "id_from_ontology_id": "UBERON:0001281$$5432",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7249,
+                    "name": "Endothelial cell of hepatic sinusoid",
+                    "parent": 7248,
+                    "type": "CT",
+                    "ontology_id": "CL:1000398",
+                    "id_from_ontology_id": "CL:1000398",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7250,
+                    "name": "Kupffer cell",
+                    "parent": 7248,
+                    "type": "CT",
+                    "ontology_id": "CL:0000091",
+                    "id_from_ontology_id": "CL:0000091",
+                    "color": "#C62828",
+                    "organ": "liver",
+                    "show_label": 1,
+                    "label_text": "Kupffer cell",
+                    "label_dx": 7.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7251,
+                    "name": "Liver perisinusoidal space",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0006729",
+                    "id_from_ontology_id": "UBERON:0006729",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7252,
+                    "name": "Hepatic stellate cell",
+                    "parent": 7251,
+                    "type": "CT",
+                    "ontology_id": "CL:0000632",
+                    "id_from_ontology_id": "CL:0000632",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7253,
+                    "name": "Leukocyte",
+                    "parent": 7251,
+                    "type": "CT",
+                    "ontology_id": "CL:0000738",
+                    "id_from_ontology_id": "CL:0000738$$5433",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7254,
+                    "name": "Hepatic cord",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0005452",
+                    "id_from_ontology_id": "UBERON:0005452",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7255,
+                    "name": "",
+                    "parent": 7254,
+                    "type": "AS",
+                    "ontology_id": "ALBUMIN",
+                    "id_from_ontology_id": "ALBUMIN",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7256,
+                    "name": "Hepatocyte",
+                    "parent": 7255,
+                    "type": "CT",
+                    "ontology_id": "CL:0000182",
+                    "id_from_ontology_id": "CL:0000182",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7257,
+                    "name": "Periportal region hepatocyte",
+                    "parent": 7254,
+                    "type": "CT",
+                    "ontology_id": "CL:0019026",
+                    "id_from_ontology_id": "CL:0019026",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7258,
+                    "name": "Centrilobular region hepatocyte",
+                    "parent": 7254,
+                    "type": "CT",
+                    "ontology_id": "CL:0019029",
+                    "id_from_ontology_id": "CL:0019029",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7259,
+                    "name": "Midzonal region hepatocyte",
+                    "parent": 7254,
+                    "type": "CT",
+                    "ontology_id": "CL:0019028",
+                    "id_from_ontology_id": "CL:0019028",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7260,
+                    "name": "Central vein of liver",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0006841",
+                    "id_from_ontology_id": "UBERON:0006841$$5434",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7261,
+                    "name": "Vein endothelial cell",
+                    "parent": 7260,
+                    "type": "CT",
+                    "ontology_id": "CL:0002543",
+                    "id_from_ontology_id": "CL:0002543$$5435",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7262,
+                    "name": "Portal triad",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001279",
+                    "id_from_ontology_id": "UBERON:0001279",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7263,
+                    "name": "Biliary ductule",
+                    "parent": 7262,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0004058",
+                    "id_from_ontology_id": "UBERON:0004058",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7264,
+                    "name": "Stratified cuboidal epithelial cell",
+                    "parent": 7263,
+                    "type": "CT",
+                    "ontology_id": "CL:0000241",
+                    "id_from_ontology_id": "CL:0000241",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7265,
+                    "name": "Columnar/cuboidal epithelial cell",
+                    "parent": 7263,
+                    "type": "CT",
+                    "ontology_id": "CL:0000075",
+                    "id_from_ontology_id": "CL:0000075",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7266,
+                    "name": "Hepatic portal vein",
+                    "parent": 7262,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001639",
+                    "id_from_ontology_id": "UBERON:0001639$$5436",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7267,
+                    "name": "Vein endothelial cell",
+                    "parent": 7266,
+                    "type": "CT",
+                    "ontology_id": "CL:0002543",
+                    "id_from_ontology_id": "CL:0002543$$5437",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7268,
+                    "name": "Nerve",
+                    "parent": 7262,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001021",
+                    "id_from_ontology_id": "UBERON:0001021",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7269,
+                    "name": "Afferent neuron",
+                    "parent": 7268,
+                    "type": "CT",
+                    "ontology_id": "CL:0000526",
+                    "id_from_ontology_id": "CL:0000526",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7270,
+                    "name": "Hepatic artery",
+                    "parent": 7262,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001193",
+                    "id_from_ontology_id": "UBERON:0001193",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7271,
+                    "name": "Endothelial cell of artery",
+                    "parent": 7270,
+                    "type": "CT",
+                    "ontology_id": "CL:1000413",
+                    "id_from_ontology_id": "CL:1000413$$5438",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7272,
+                    "name": "Blood vessel smooth muscle cell",
+                    "parent": 7270,
+                    "type": "CT",
+                    "ontology_id": "CL:0019018",
+                    "id_from_ontology_id": "CL:0019018$$5439",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7273,
+                    "name": "Interstitial tissue",
+                    "parent": 7262,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0005169",
+                    "id_from_ontology_id": "UBERON:0005169",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7274,
+                    "name": "Hepatic portal fibroblast",
+                    "parent": 7273,
+                    "type": "CT",
+                    "ontology_id": "CL:0009100",
+                    "id_from_ontology_id": "CL:0009100",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7275,
+                    "name": "Intralobular bile duct",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001282",
+                    "id_from_ontology_id": "UBERON:0001282",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7276,
+                    "name": "Hepatic oval stem cell",
+                    "parent": 7275,
+                    "type": "CT",
+                    "ontology_id": "CL:0002196",
+                    "id_from_ontology_id": "CL:0002196",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7277,
+                    "name": "Lymphatic vessel",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0001473",
+                    "id_from_ontology_id": "UBERON:0001473",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7278,
+                    "name": "Endothelial cell of lymphatic vessel",
+                    "parent": 7277,
+                    "type": "CT",
+                    "ontology_id": "CL:0002138",
+                    "id_from_ontology_id": "CL:0002138$$5440",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7279,
+                    "name": "Liver stroma",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0016478",
+                    "id_from_ontology_id": "UBERON:0016478",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7280,
+                    "name": "Connective tissue",
+                    "parent": 7279,
+                    "type": "AS",
+                    "ontology_id": "UBERON:0002384",
+                    "id_from_ontology_id": "UBERON:0002384$$5441",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7281,
+                    "name": "Liver immune resident component",
+                    "parent": 7247,
+                    "type": "AS",
+                    "ontology_id": "ASCTB-TEMP:liver-immune-resident-component",
+                    "id_from_ontology_id": "ASCTB-TEMP:liver-immune-resident-component",
+                    "color": "#984ea0",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7282,
+                    "name": "Dendritic cell, human",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0001056",
+                    "id_from_ontology_id": "CL:0001056$$5442",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7283,
+                    "name": "Conventional dendritic cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000990",
+                    "id_from_ontology_id": "CL:0000990$$5443",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7284,
+                    "name": "Cd1c-positive myeloid dendritic cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0002399",
+                    "id_from_ontology_id": "CL:0002399$$5444",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7285,
+                    "name": "Plasmacytoid dendritic cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000784",
+                    "id_from_ontology_id": "CL:0000784",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7286,
+                    "name": "Cd8-positive, alpha-beta memory t cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000909",
+                    "id_from_ontology_id": "CL:0000909$$5445",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7287,
+                    "name": "Cd4-positive, alpha-beta t cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000624",
+                    "id_from_ontology_id": "CL:0000624$$5446",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7288,
+                    "name": "Gamma-delta t cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000798",
+                    "id_from_ontology_id": "CL:0000798",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7289,
+                    "name": "Cd8-positive, alpha-beta memory t cell, cd45ro-positive",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0001203",
+                    "id_from_ontology_id": "CL:0001203",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7290,
+                    "name": "Type i nk t cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000921",
+                    "id_from_ontology_id": "CL:0000921",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7291,
+                    "name": "Natural killer cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:0000623",
+                    "id_from_ontology_id": "CL:0000623$$5447",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7292,
+                    "name": "Eomes low liver nk cell",
+                    "parent": 7291,
+                    "type": "CT",
+                    "ontology_id": "ASCTB-TEMP:eomes-low-liver-nk-cell",
+                    "id_from_ontology_id": "ASCTB-TEMP:eomes-low-liver-nk-cell",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7293,
+                    "name": "Tbet low liver nk cell",
+                    "parent": 7291,
+                    "type": "CT",
+                    "ontology_id": "ASCTB-TEMP:tbet-low-liver-nk-cell",
+                    "id_from_ontology_id": "ASCTB-TEMP:tbet-low-liver-nk-cell",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                },
+                {
+                    "id": 7294,
+                    "name": "Hepatic pit cell",
+                    "parent": 7281,
+                    "type": "CT",
+                    "ontology_id": "CL:2000054",
+                    "id_from_ontology_id": "CL:2000054",
+                    "color": "#ff7f00",
+                    "organ": "liver",
+                    "show_label": 0,
+                    "label_text": "",
+                    "label_dx": 8.0,
+                    "label_dy": -7,
+                    "label_align": "left",
+                    "label_baseline": "bottom"
+                }
+            ],
+            "transform": [
+                {
+                    "type": "stratify",
+                    "key": "id",
+                    "parentKey": "parent"
+                },
+                {
+                    "type": "tree",
+                    "method": {
+                        "signal": "layout"
+                    },
+                    "size": [
+                        570,
+                        500
+                    ],
+                    "as": [
+                        "x",
+                        "y",
+                        "depth",
+                        "children"
+                    ]
+                },
+                {
+                    "type": "formula",
+                    "expr": "datum.y + 50",
+                    "as": "x_draw"
+                },
+                {
+                    "type": "formula",
+                    "expr": "datum.x + 220",
+                    "as": "y_draw"
+                }
+            ]
+        },
+        {
+            "name": "links",
+            "source": "tree",
+            "transform": [
+                {
+                    "type": "treelinks"
+                },
+                {
+                    "type": "linkpath",
+                    "shape": {
+                        "signal": "links"
+                    },
+                    "orient": "horizontal",
+                    "sourceX": "source.x_draw",
+                    "sourceY": "source.y_draw",
+                    "targetX": "target.x_draw",
+                    "targetY": "target.y_draw"
+                }
+            ]
+        }
+    ],
+    "marks": [
+        {
+            "type": "path",
+            "from": {
+                "data": "links"
+            },
+            "encode": {
+                "update": {
+                    "path": {
+                        "field": "path"
+                    },
+                    "stroke": {
+                        "value": "#ccc"
+                    },
+                    "opacity": {
+                        "value": 0.8
+                    },
+                    "strokeWidth": {
+                        "value": 1.1
+                    }
+                }
+            }
+        },
+        {
+            "type": "symbol",
+            "from": {
+                "data": "tree"
+            },
+            "encode": {
+                "enter": {
+                    "size": {
+                        "value": 45
+                    },
+                    "stroke": {
+                        "value": "#fff"
+                    },
+                    "strokeWidth": {
+                        "value": 0.5
+                    }
+                },
+                "update": {
+                    "x": {
+                        "field": "x_draw"
+                    },
+                    "y": {
+                        "field": "y_draw"
+                    },
+                    "fill": {
+                        "field": "color"
+                    },
+                    "opacity": {
+                        "value": 0.7
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "tree"
+            },
+            "encode": {
+                "enter": {
+                    "text": {
+                        "field": "label_text"
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "font": {
+                        "value": "BentonSans"
+                    },
+                    "baseline": {
+                        "value": "middle"
+                    }
+                },
+                "update": {
+                    "x": {
+                        "field": "x_draw"
+                    },
+                    "y": {
+                        "field": "y_draw"
+                    },
+                    "align": {
+                        "field": "label_align"
+                    },
+                    "opacity": {
+                        "signal": "datum.label_text != '' ? 1 : 0"
+                    },
+                    "dx": {
+                        "field": "label_dx"
+                    },
+                    "dy": {
+                        "field": "label_dy"
+                    },
+                    "baseline": {
+                        "field": "label_baseline"
+                    },
+                    "angle": {
+                        "value": -30
+                    }
+                }
+            }
+        }
+    ],
+    "config": {}
+}
