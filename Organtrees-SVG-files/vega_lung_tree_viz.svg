@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1410" height="500" viewBox="0 0 1410 500">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4, .cls-5, .cls-2, .cls-6, .cls-7, .cls-8 {
+        isolation: isolate;
+      }
+
+      .cls-4, .cls-2 {
+        opacity: .8;
+      }
+
+      .cls-5 {
+        fill: #c62828;
+      }
+
+      .cls-5, .cls-2, .cls-6, .cls-3, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        opacity: .7;
+        stroke: #fff;
+        stroke-width: .5px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #ccc;
+        stroke-width: 1.1px;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        fill: #984ea0;
+      }
+
+      .cls-7 {
+        fill: #ff7f00;
+      }
+
+      .cls-8 {
+        font-family: BentonSans-Regular, 'Benton Sans';
+        font-size: 12px;
+      }
+
+      .cls-10 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-20 {
+        letter-spacing: 0em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-22 {
+        letter-spacing: 0em;
+      }
+
+      .cls-23 {
+        letter-spacing: 0em;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M57.74-75.97h1410v500H57.74V-75.97Z"/>
+  <path class="cls-2" d="M107.74,234.03c50,0,50,68.18,100,68.18"/>
+  <path class="cls-2" d="M207.74,302.21h100"/>
+  <path class="cls-2" d="M307.74,302.21h100"/>
+  <path class="cls-2" d="M407.74,302.21h100"/>
+  <path class="cls-2" d="M507.74,302.21h100"/>
+  <path class="cls-2" d="M607.74,302.21h100"/>
+  <path class="cls-2" d="M707.74,302.21h100"/>
+  <path class="cls-2" d="M807.74,302.21h100"/>
+  <path class="cls-2" d="M907.74,302.21h100"/>
+  <path class="cls-2" d="M1007.74,302.21c50,0,50-81.82,100-81.82"/>
+  <path class="cls-2" d="M1007.74,302.21c100,0,100-27.27,200-27.27"/>
+  <path class="cls-2" d="M1007.74,302.21c100,0,100-5.45,200-5.45"/>
+  <path class="cls-2" d="M1007.74,302.21c100,0,100,16.36,200,16.36"/>
+  <path class="cls-2" d="M1007.74,302.21c100,0,100,38.18,200,38.18"/>
+  <path class="cls-2" d="M1007.74,302.21c100,0,100,60,200,60"/>
+  <path class="cls-2" d="M1107.74,220.39c50,0,50-10.91,100-10.91"/>
+  <path class="cls-2" d="M1107.74,220.39c50,0,50,10.91,100,10.91"/>
+  <path class="cls-6" d="M211.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M311.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M411.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M511.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M611.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M711.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M811.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M911.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-5" d="M1011.09,302.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M1111.09,220.39c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-7" d="M1211.09,209.48c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-7" d="M1211.09,231.3c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-5" d="M1211.09,274.94c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-5" d="M1211.09,296.76c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-7" d="M1211.09,318.58c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-7" d="M1211.09,340.39c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-7" d="M1211.09,362.21c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <text class="cls-8" transform="translate(109.55 228.44) rotate(-30)"><tspan class="cls-20" x="0" y="0">B</tspan><tspan x="8.24" y="0">ody</tspan></text>
+  <text class="cls-8" transform="translate(1068.0629 197.1498) rotate(-29.9999)"><tspan x="0" y="0">B</tspan><tspan class="cls-12" x="8.29" y="0">r</tspan><tspan x="12.79" y="0">onchial submu</tspan><tspan class="cls-22" x="94.22" y="0">c</tspan><tspan class="cls-23" x="100.55" y="0">os</tspan><tspan x="113.46" y="0">al gland</tspan></text>
+  <text class="cls-8" transform="translate(979.24 217.57) rotate(-30)"><tspan x="0" y="0">Main b</tspan><tspan class="cls-12" x="37.22" y="0">r</tspan><tspan x="41.72" y="0">onchus</tspan></text>
+  <text class="cls-8" transform="translate(1114.2588 215.7003) rotate(-29.9999)"><tspan class="cls-14" x="0" y="0">P</tspan><tspan x="7.55" y="0">ulmona</tspan><tspan class="cls-25" x="49.3" y="0">r</tspan><tspan x="54.16" y="0">y </tspan><tspan class="cls-23" x="63.36" y="0">c</tspan><tspan x="69.68" y="0">apilla</tspan><tspan class="cls-25" x="99.15" y="0">r</tspan><tspan x="104" y="0">y</tspan></text>
+  <text class="cls-8" transform="translate(116.4 368.71) rotate(-30)"><tspan class="cls-17" x="0" y="0">R</tspan><tspan class="cls-23" x="7.76" y="0">e</tspan><tspan x="14.27" y="0">spi</tspan><tspan class="cls-15" x="30.6" y="0">r</tspan><tspan x="35.18" y="0">a</tspan><tspan class="cls-24" x="41.82" y="0">t</tspan><tspan x="46.25" y="0">o</tspan><tspan class="cls-25" x="53.24" y="0">r</tspan><tspan x="58.1" y="0">y </tspan><tspan class="cls-21" x="67.31" y="0">s</tspan><tspan class="cls-13" x="73.29" y="0">y</tspan><tspan class="cls-23" x="79.49" y="0">s</tspan><tspan class="cls-24" x="85.52" y="0">t</tspan><tspan x="89.95" y="0">em</tspan></text>
+  <text class="cls-8" transform="translate(227.67 361.93) rotate(-30)"><tspan class="cls-17" x="0" y="0">R</tspan><tspan class="cls-23" x="7.76" y="0">e</tspan><tspan x="14.27" y="0">spi</tspan><tspan class="cls-15" x="30.6" y="0">r</tspan><tspan x="35.18" y="0">a</tspan><tspan class="cls-24" x="41.82" y="0">t</tspan><tspan x="46.25" y="0">o</tspan><tspan class="cls-25" x="53.24" y="0">r</tspan><tspan x="58.1" y="0">y t</tspan><tspan class="cls-15" x="71.83" y="0">r</tspan><tspan x="76.41" y="0">act</tspan></text>
+  <text class="cls-8" transform="translate(298.58 378.44) rotate(-30)"><tspan class="cls-18" x="0" y="0">L</tspan><tspan class="cls-16" x="6.43" y="0">ow</tspan><tspan x="22.1" y="0">er </tspan><tspan class="cls-19" x="36.33" y="0">r</tspan><tspan class="cls-23" x="40.79" y="0">e</tspan><tspan x="47.3" y="0">spi</tspan><tspan class="cls-15" x="63.63" y="0">r</tspan><tspan x="68.21" y="0">a</tspan><tspan class="cls-24" x="74.85" y="0">t</tspan><tspan x="79.28" y="0">o</tspan><tspan class="cls-25" x="86.27" y="0">r</tspan><tspan x="91.13" y="0">y t</tspan><tspan class="cls-15" x="104.86" y="0">r</tspan><tspan x="109.44" y="0">act</tspan></text>
+  <text class="cls-8" transform="translate(484 328.85) rotate(-30)"><tspan x="0" y="0">Lung</tspan></text>
+  <text class="cls-8" transform="translate(469.47 394.69) rotate(-30)"><tspan class="cls-23" x="0" y="0">S</tspan><tspan x="7.77" y="0">e</tspan><tspan class="cls-22" x="14.39" y="0">c</tspan><tspan x="20.72" y="0">onda</tspan><tspan class="cls-25" x="48.6" y="0">r</tspan><tspan x="53.46" y="0">y pulmona</tspan><tspan class="cls-25" x="111.6" y="0">r</tspan><tspan x="116.46" y="0">y lobule</tspan></text>
+  <text class="cls-8" transform="translate(612.2 369.74) rotate(-30)"><tspan class="cls-10" x="0" y="0">T</tspan><tspan x="5.86" y="0">erminal b</tspan><tspan class="cls-12" x="57.97" y="0">r</tspan><tspan x="62.47" y="0">onchiole</tspan></text>
+  <text class="cls-8" transform="translate(720.32 364.77) rotate(-30)"><tspan class="cls-14" x="0" y="0">P</tspan><tspan x="7.55" y="0">ulmona</tspan><tspan class="cls-25" x="49.3" y="0">r</tspan><tspan x="54.16" y="0">y acinus</tspan></text>
+  <text class="cls-8" transform="translate(796.92 378) rotate(-30)"><tspan class="cls-17" x="0" y="0">R</tspan><tspan class="cls-23" x="7.76" y="0">e</tspan><tspan x="14.27" y="0">spi</tspan><tspan class="cls-15" x="30.6" y="0">r</tspan><tspan x="35.18" y="0">a</tspan><tspan class="cls-24" x="41.82" y="0">t</tspan><tspan x="46.25" y="0">o</tspan><tspan class="cls-25" x="53.24" y="0">r</tspan><tspan x="58.1" y="0">y b</tspan><tspan class="cls-12" x="74.5" y="0">r</tspan><tspan x="79" y="0">onchiole</tspan></text>
+  <text class="cls-8" transform="translate(929.92 358.96) rotate(-30)"><tspan x="0" y="0">Al</tspan><tspan class="cls-12" x="11.16" y="0">v</tspan><tspan x="17.04" y="0">eolus </tspan><tspan class="cls-23" x="49.67" y="0">o</tspan><tspan x="56.55" y="0">f lung</tspan></text>
+  <text class="cls-8" transform="translate(1215.487 275.0289) rotate(-29.9999)"><tspan class="cls-11" x="0" y="0">T</tspan><tspan x="6.12" y="0">ype II pneumo</tspan><tspan class="cls-22" x="84.83" y="0">c</tspan><tspan class="cls-9" x="91.15" y="0">y</tspan><tspan class="cls-24" x="97.59" y="0">t</tspan><tspan x="102.02" y="0">e</tspan></text>
+  <text class="cls-8" transform="translate(1216.5968 299.0665) rotate(-29.9999)"><tspan class="cls-11" x="0" y="0">T</tspan><tspan x="6.12" y="0">ype I pneumo</tspan><tspan class="cls-22" x="81.35" y="0">c</tspan><tspan class="cls-9" x="87.67" y="0">y</tspan><tspan class="cls-24" x="94.11" y="0">t</tspan><tspan x="98.54" y="0">e</tspan></text>
+  <g class="cls-4">
+    <path class="cls-3" d="M208.27,165.76c-50,0-50,68.18-100,68.18"/>
+    <path class="cls-3" d="M308.27,165.76h-100"/>
+    <path class="cls-3" d="M408.27,165.76h-100"/>
+    <path class="cls-3" d="M508.27,165.76h-100"/>
+    <path class="cls-3" d="M608.27,165.76h-100"/>
+    <path class="cls-3" d="M708.27,165.76h-100"/>
+    <path class="cls-3" d="M808.27,165.76h-100"/>
+    <path class="cls-3" d="M908.27,165.76h-100"/>
+    <path class="cls-3" d="M1008.27,165.76h-100"/>
+    <path class="cls-3" d="M1208.27,105.76c-100,0-100,60-200,60"/>
+  </g>
+  <path class="cls-6" d="M1054.24,161.04c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-5" d="M1211.62,105.76c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  <path class="cls-6" d="M111.09,234.03c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+</svg>

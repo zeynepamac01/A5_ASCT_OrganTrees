@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #c62828;
+      }
+
+      .cls-3, .cls-2, .cls-4, .cls-5, .cls-6 {
+        isolation: isolate;
+      }
+
+      .cls-3, .cls-2, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        opacity: .7;
+        stroke: #fff;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        opacity: .8;
+        stroke: #ccc;
+        stroke-width: 1.1px;
+      }
+
+      .cls-4 {
+        font-family: BentonSans-Regular, 'Benton Sans';
+        font-size: 8px;
+      }
+
+      .cls-5 {
+        fill: #984ea0;
+      }
+
+      .cls-6 {
+        fill: #ff7f00;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M0,0h800v500H0V0Z"/>
+  <g>
+    <path class="cls-2" d="M50,352h100"/>
+    <path class="cls-2" d="M150,352c50,0,50-60,100-60"/>
+    <path class="cls-2" d="M150,352c100,0,100,60,200,60"/>
+    <path class="cls-2" d="M250,292h100"/>
+    <path class="cls-2" d="M350,412h100"/>
+    <path class="cls-2" d="M350,292c50,0,50-24,100-24"/>
+    <path class="cls-2" d="M350,292c50,0,50,24,100,24"/>
+  </g>
+  <g>
+    <path class="cls-5" d="M53.35,352c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-5" d="M153.35,352c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-5" d="M253.35,292c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-3" d="M353.35,292c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-3" d="M453.35,268c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-6" d="M453.35,316c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-3" d="M353.35,412c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+    <path class="cls-3" d="M453.35,412c0,1.85-1.5,3.35-3.35,3.35s-3.35-1.5-3.35-3.35,1.5-3.35,3.35-3.35,3.35,1.5,3.35,3.35"/>
+  </g>
+  <text class="cls-4" transform="translate(49.37 346.07) rotate(-30)"><tspan class="cls-11" x="0" y="0">B</tspan><tspan x="5.5" y="0">ody</tspan></text>
+  <text class="cls-4" transform="translate(149.37 346.07) rotate(-30)"><tspan class="cls-8" x="0" y="0">P</tspan><tspan class="cls-7" x="5.04" y="0">r</tspan><tspan class="cls-13" x="8.04" y="0">os</tspan><tspan class="cls-11" x="16.64" y="0">t</tspan><tspan x="19.63" y="0">a</tspan><tspan class="cls-14" x="24.05" y="0">t</tspan><tspan x="27" y="0">e gland</tspan></text>
+  <text class="cls-4" transform="translate(250.59 287.4) rotate(-30)"><tspan class="cls-8" x="0" y="0">P</tspan><tspan class="cls-7" x="5.04" y="0">r</tspan><tspan class="cls-13" x="8.04" y="0">os</tspan><tspan class="cls-11" x="16.64" y="0">t</tspan><tspan x="19.62" y="0">a</tspan><tspan class="cls-14" x="24.05" y="0">t</tspan><tspan x="27" y="0">e epithelium</tspan></text>
+  <text class="cls-4" transform="translate(350.59 287.4) rotate(-30)"><tspan class="cls-8" x="0" y="0">P</tspan><tspan class="cls-7" x="5.04" y="0">r</tspan><tspan class="cls-13" x="8.04" y="0">os</tspan><tspan class="cls-11" x="16.64" y="0">t</tspan><tspan x="19.62" y="0">a</tspan><tspan class="cls-14" x="24.05" y="0">t</tspan><tspan x="27" y="0">e glandular acinus</tspan></text>
+  <text class="cls-4" transform="translate(453.15 261.03) rotate(-30)"><tspan x="0" y="0">Luminal </tspan><tspan class="cls-12" x="31.59" y="0">c</tspan><tspan x="35.81" y="0">ell </tspan><tspan class="cls-13" x="46.09" y="0">o</tspan><tspan x="50.68" y="0">f the p</tspan><tspan class="cls-7" x="74.1" y="0">r</tspan><tspan class="cls-13" x="77.1" y="0">os</tspan><tspan class="cls-11" x="85.71" y="0">t</tspan><tspan x="88.69" y="0">a</tspan><tspan class="cls-14" x="93.12" y="0">t</tspan><tspan x="96.07" y="0">e epithelium</tspan></text>
+  <text class="cls-4" transform="translate(457.34 313.3) rotate(-30)"><tspan class="cls-15" x="0" y="0">B</tspan><tspan x="5.5" y="0">a</tspan><tspan class="cls-13" x="9.93" y="0">s</tspan><tspan x="13.95" y="0">al </tspan><tspan class="cls-12" x="22.25" y="0">c</tspan><tspan x="26.46" y="0">ell </tspan><tspan class="cls-13" x="36.75" y="0">o</tspan><tspan x="41.34" y="0">f p</tspan><tspan class="cls-7" x="50.75" y="0">r</tspan><tspan class="cls-13" x="53.75" y="0">os</tspan><tspan class="cls-11" x="62.36" y="0">t</tspan><tspan x="65.34" y="0">a</tspan><tspan class="cls-14" x="69.77" y="0">t</tspan><tspan x="72.72" y="0">e epithelium</tspan></text>
+  <text class="cls-4" transform="translate(352.43 405.68) rotate(-30)"><tspan class="cls-8" x="0" y="0">P</tspan><tspan class="cls-7" x="5.04" y="0">r</tspan><tspan class="cls-13" x="8.04" y="0">os</tspan><tspan class="cls-11" x="16.64" y="0">t</tspan><tspan x="19.62" y="0">atic u</tspan><tspan class="cls-10" x="39.93" y="0">r</tspan><tspan x="42.91" y="0">eth</tspan><tspan class="cls-9" x="55.04" y="0">r</tspan><tspan x="58.09" y="0">a</tspan></text>
+  <text class="cls-4" transform="translate(452.43 405.68) rotate(-30)"><tspan x="0" y="0">Hillock </tspan><tspan class="cls-12" x="27.05" y="0">c</tspan><tspan x="31.27" y="0">ell </tspan><tspan class="cls-13" x="41.56" y="0">o</tspan><tspan x="46.14" y="0">f the p</tspan><tspan class="cls-7" x="69.57" y="0">r</tspan><tspan class="cls-13" x="72.57" y="0">os</tspan><tspan class="cls-11" x="81.17" y="0">t</tspan><tspan x="84.16" y="0">atic u</tspan><tspan class="cls-10" x="104.46" y="0">r</tspan><tspan x="107.44" y="0">eth</tspan><tspan class="cls-9" x="119.57" y="0">r</tspan><tspan x="122.62" y="0">al epithelium</tspan></text>
+</svg>
